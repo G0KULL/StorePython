@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form fill up</title>
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+    <style>
+    body{
+        background-image:url("https://images.unsplash.com/photo-1578589335615-9e804277a5af?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8Y29mZmVlJTIwYm9va3xlbnwwfHwwfHw%3D&w=1000&q=80");
+        background-size:cover;
+        }
+    .btn{
+        border-radius:20px;
+        color:white;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+  <div class="col-lg-10 pt-lg-5 mt-lg-5 text-center">
+      <p class="display-6 text-white mb-6" >A school store, however, is more than a "convenience store;" its shelves also are stocked with the materials for building academic and lifelong learning skills. Included: Tips, resources for running school-based businesses.</p>
+   <div>
+       <form method="post" action="form">
+           {% csrf_token %}
+       <input type="submit" class="btn btn-primary" value="Fill this Form" >
+       </form>
+   </div>
+  </div>
+</div>
+</body>
+</html>
